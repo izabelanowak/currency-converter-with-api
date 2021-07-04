@@ -7,7 +7,7 @@ export const useAPI = () => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await axios.get("https://api.excharngerate.host/latest?base=PLN");
+                const response = await axios.get("https://api.exchangerate.host/latest?base=PLN");
                 setRates(response.data);
             }
             catch (error) {
