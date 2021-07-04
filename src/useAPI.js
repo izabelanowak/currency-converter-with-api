@@ -9,11 +9,17 @@ export const useAPI = () => {
     });
 
     const getRatesData = () => {
+        const APIurl = "https://api.exchangerate.host/latest?base=PLN?";
         (async () => {
             try {
-                const response = await axios.get("https://api.exchangerate.host/latest?base=PLN");
+                const response = await axios.get(APIurl);
+
+                if (APIurl !== "https://api.exchangerate.host/latest?base=PLN?") {
+                    throw new Error();
+                }
+
                 setRatesData({
-                    status: "success",
+                    status: response.data.rates ? "success" : "error",
                     date: response.data.date,
                     rates: response.data.rates
                 });
