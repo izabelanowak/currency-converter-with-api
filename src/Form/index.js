@@ -12,7 +12,6 @@ const Form = ({ rates }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        console.log(rates[selectedCurrency]);
         const result = calculateResult(amount, rates[selectedCurrency]);
         setResult({ value: result, currency: selectedCurrency });
     };
