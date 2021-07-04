@@ -12,10 +12,10 @@ export const Button = styled.button`
     box-shadow: 0 0 5px ${({ theme }) => theme.colors.accentColor};
 
     &:hover {
-        background-color: ${({ theme }) => theme.colors.hoverColor};
+        filter: brightness(110%);
     }
 
     &:active {
-        background-color: ${({ theme }) => theme.colors.activeColor};
+        filter: brightness(120%);
     }
 `;
