@@ -5,20 +5,20 @@ import Clock from "./Clock";
 import FormField from "./FormField";
 import Result from "./Result";
 
-const Form = ({ currencies }) => {
+const Form = ({ rates }) => {
     const [amount, setAmount] = useState("");
-    const [selectedCurrency, setSelectedCurrency] = useState(currencies[0].id);
+    const [selectedCurrency, setSelectedCurrency] = useState("EUR");
     const [result, setResult] = useState();
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        const currency = currencies.find(({ id }) => id === selectedCurrency);
-        const result = calculateResult(amount, currency.exchangeRate);
-        setResult({ value: result, currency: currency.id });
+        console.log(rates[selectedCurrency]);
+        const result = calculateResult(amount, rates[selectedCurrency]);
+        setResult({ value: result, currency: selectedCurrency });
     };
 
     const calculateResult = (amount, rate) => {
-        return amount / rate;
+        return amount * rate;
     };
 
     return (
@@ -42,9 +42,9 @@ const Form = ({ currencies }) => {
                         value={selectedCurrency}
                         onChange={({ target }) => setSelectedCurrency(target.value)}
                     >
-                        {currencies.map(currency => (
-                            <option key={currency.id} value={currency.id}>
-                                {currency.name} - {currency.id}
+                        {Object.keys(rates).map(currency => (
+                            <option key={currency} value={currency}>
+                                {currency}
                             </option>)
                         )}
                     </Input>
