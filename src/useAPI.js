@@ -9,12 +9,12 @@ export const useAPI = () => {
     });
 
     const getRatesData = () => {
-        const APIurl = "https://api.exchangerate.host/latest?base=PLN?";
+        const APIurl = "https://api.exchangerate.host/latest?base=PLN";
         (async () => {
             try {
                 const response = await axios.get(APIurl);
 
-                if (APIurl !== "https://api.exchangerate.host/latest?base=PLN?") {
+                if (APIurl !== "https://api.exchangerate.host/latest?base=PLN") {
                     throw new Error();
                 }
 
