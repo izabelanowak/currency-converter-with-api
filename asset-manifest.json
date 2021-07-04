@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/currency-converter-react/static/js/main.a33ef4c8.chunk.js",
-    "main.js.map": "/currency-converter-react/static/js/main.a33ef4c8.chunk.js.map",
-    "runtime-main.js": "/currency-converter-react/static/js/runtime-main.417230e0.js",
-    "runtime-main.js.map": "/currency-converter-react/static/js/runtime-main.417230e0.js.map",
-    "static/js/2.c09d8b36.chunk.js": "/currency-converter-react/static/js/2.c09d8b36.chunk.js",
-    "static/js/2.c09d8b36.chunk.js.map": "/currency-converter-react/static/js/2.c09d8b36.chunk.js.map",
-    "static/js/3.9875460c.chunk.js": "/currency-converter-react/static/js/3.9875460c.chunk.js",
-    "static/js/3.9875460c.chunk.js.map": "/currency-converter-react/static/js/3.9875460c.chunk.js.map",
-    "index.html": "/currency-converter-react/index.html",
-    "static/js/2.c09d8b36.chunk.js.LICENSE.txt": "/currency-converter-react/static/js/2.c09d8b36.chunk.js.LICENSE.txt",
-    "static/media/background.6795f2ba.jpg": "/currency-converter-react/static/media/background.6795f2ba.jpg"
+    "main.js": "/currency-converter-with-api/static/js/main.0b6aad35.chunk.js",
+    "main.js.map": "/currency-converter-with-api/static/js/main.0b6aad35.chunk.js.map",
+    "runtime-main.js": "/currency-converter-with-api/static/js/runtime-main.a6ccd537.js",
+    "runtime-main.js.map": "/currency-converter-with-api/static/js/runtime-main.a6ccd537.js.map",
+    "static/js/2.d97a0290.chunk.js": "/currency-converter-with-api/static/js/2.d97a0290.chunk.js",
+    "static/js/2.d97a0290.chunk.js.map": "/currency-converter-with-api/static/js/2.d97a0290.chunk.js.map",
+    "static/js/3.4c915e5e.chunk.js": "/currency-converter-with-api/static/js/3.4c915e5e.chunk.js",
+    "static/js/3.4c915e5e.chunk.js.map": "/currency-converter-with-api/static/js/3.4c915e5e.chunk.js.map",
+    "index.html": "/currency-converter-with-api/index.html",
+    "static/js/2.d97a0290.chunk.js.LICENSE.txt": "/currency-converter-with-api/static/js/2.d97a0290.chunk.js.LICENSE.txt",
+    "static/media/background.6795f2ba.jpg": "/currency-converter-with-api/static/media/background.6795f2ba.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.417230e0.js",
-    "static/js/2.c09d8b36.chunk.js",
-    "static/js/main.a33ef4c8.chunk.js"
+    "static/js/runtime-main.a6ccd537.js",
+    "static/js/2.d97a0290.chunk.js",
+    "static/js/main.0b6aad35.chunk.js"
   ]
 }
