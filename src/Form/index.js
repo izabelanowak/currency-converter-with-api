@@ -1,23 +1,25 @@
 import { Wrapper, Fieldset, Legend, Input } from "./styled";
 import { Button } from "../styledButton";
-import { useState } from "react";
 import Clock from "./Clock";
 import FormField from "./FormField";
 import Result from "./Result";
+import { useFormResult } from "./useFormResult";
 
 const Form = ({ rates }) => {
-    const [amount, setAmount] = useState("");
-    const [selectedCurrency, setSelectedCurrency] = useState("EUR");
-    const [result, setResult] = useState();
+    const {
+        amount,
+        setAmount,
+        selectedCurrency,
+        setSelectedCurrency,
+        result,
+        setResult,
+        calculateResult
+    } = useFormResult();
 
     const onFormSubmit = (event) => {
         event.preventDefault();
         const result = calculateResult(amount, rates[selectedCurrency]);
         setResult({ value: result, currency: selectedCurrency });
-    };
-
-    const calculateResult = (amount, rate) => {
-        return amount * rate;
     };
 
     return (
