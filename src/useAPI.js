@@ -8,32 +8,33 @@ export const useAPI = () => {
         rates: null,
     });
 
-    const getRatesData = () => {
-        const APIurl = "https://api.exchangerate.host/latest?base=PLN";
-        (async () => {
-            try {
-                const response = await axios.get(APIurl);
+    const APIurl = "https://api.exchangerate.host/latest?base=PLN";
 
-                if (APIurl !== "https://api.exchangerate.host/latest?base=PLN") {
-                    throw new Error();
-                }
+    const getRatesData = async (APIurl) => {
+        try {
+            const response = await axios.get(APIurl);
 
-                setRatesData({
-                    status: response.data.rates ? "success" : "error",
-                    date: response.data.date,
-                    rates: response.data.rates
-                });
+            if (APIurl !== "https://api.exchangerate.host/latest?base=PLN") {
+                throw new Error();
             }
-            catch (error) {
-                setRatesData({
-                    status: "error"
-                });
-            }
-        })();
+
+            setRatesData({
+                status: response.data.rates ? "success" : "error",
+                date: response.data.date,
+                rates: response.data.rates
+            });
+        }
+        catch (error) {
+            setRatesData({
+                status: "error"
+            });
+        }
     };
 
     useEffect(() => {
-        setTimeout(getRatesData, 1_000);
+        setTimeout(() => {
+            getRatesData(APIurl);
+        }, 1_000);
     }, [])
 
     return ratesData;
